@@ -1,27 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Carousel</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Carousel</title>
 </head>
+
 <body>
 
-    <ul id="slides" class="slides">
-        <li class="slide active">Slide 1</li>
-        <li class="slide">Slide 2</li>
-        <li class="slide">Slide 3</li>
-        <li class="slide">Slide 4</li>
-        <li class="slide">Slide 5</li>
+  <div class="carousel">
+    <ul id="slides-container" class="slides">
+      <li class="slide active">Slide 1</li>
+      <li class="slide">Slide 2</li>
+      <li class="slide">Slide 3</li>
+      <li class="slide">Slide 4</li>
+      <li class="slide">Slide 5</li>
     </ul>
 
-    <button class="controls" id="pause">Pause</button>
-    <button class="controls" id="previous">Previous</button>
-    <button class="controls" id="next">Next</button>
+    <div id="controls-container" class="controls">
+      <span class="control" id="pause-btn"><i class="fas fa-pause"></i></span>
+      <span class="control" id="previous-btn"><i class="fas fa-arrow-left"></i></span>
+      <span class="control" id="next-btn"><i class="fas fa-arrow-right"></i></span>
+    </div>
 
-    <script src="assets/js/main.js"></script>
+    <ol id="indicators-container" class="indicators">
+      <li class="indicator active" data-slide-to="0">1</li>
+      <li class="indicator" data-slide-to="1">2</li>
+      <li class="indicator" data-slide-to="2">3</li>
+      <li class="indicator" data-slide-to="3">4</li>
+      <li class="indicator" data-slide-to="4">5</li>
+    </ol>
+
+  </div>
+
+  <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>
