@@ -1,5 +1,7 @@
 //   **********CAROUSEL**********
 
-const carousel = new Carousel();
+const carousel = new SwipeCarousel('#myCarousel');
 
 carousel.init();
+
+  
