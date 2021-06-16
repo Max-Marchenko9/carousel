@@ -1,11 +1,39 @@
 //   **********CAROUSEL**********
 
-class Carousel {
-  constructor(containerID = "#carousel", slideID = ".slide") {
-    this.container = document.querySelector(containerID);
-    this.slides = document.querySelectorAll(slideID);
+// class Carousel {
+    // constructor(containerID = "#carousel", slideID = ".slide") {
+    //   this.container = document.querySelector(containerID);
+    //   this.slides = document.querySelectorAll(slideID);
+  
+    //   this.interval = 1500;
+    // }
 
-    this.interval = 1500;
+class Carousel {
+  constructor(params) {
+    // console.log(params);
+    let setting = this._initConfig(params);
+
+    this.container = document.querySelector(setting.containerID);
+    this.slides = document.querySelectorAll(setting.slideID);
+    this.interval = setting.interval;
+  }
+
+  _initConfig(objParams) {
+      let defSettings = {
+        containerID: '#carousel',
+        interval: 1500,
+        isPlaying: true,
+        slideID: '.slide'
+      };
+
+      if (typeof objParams !== 'undefined'){
+        defSettings.containerID = objParams.containerID || defSettings.containerID;
+        defSettings.interval = objParams.interval || defSettings.interval;
+        defSettings.slideID = objParams.slideID || defSettings.slideID;
+        defSettings.isPlaying = objParams.isPlaying || defSettings.isPlaying;
+      }
+
+    return defSettings;
   }
 
   _initProps() {
