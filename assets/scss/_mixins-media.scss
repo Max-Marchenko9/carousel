@@ -1,0 +1,50 @@
+
+@mixin lg-min {
+  @media (min-width: $lg) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: $lg - 0.2) {
+    @content;
+  }
+}
+
+@mixin lg-md {
+  @media (max-width: $lg - 0.2) and (min-width: $md) {
+    @content;
+  }
+}
+
+
+@mixin md-min {
+  @media (min-width: $md) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: $md - 0.2) {
+    @content;
+  }
+}
+
+@mixin md-sm {
+  @media (max-width: $md - 0.2) and (min-width: $sm) {
+    @content;
+  }
+}
+
+
+@mixin sm-min {
+  @media (min-width: $sm) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: $sm - 0.2) {
+    @content;
+  }
+}
